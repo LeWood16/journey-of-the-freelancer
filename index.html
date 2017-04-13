@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- documentation at http://getbootstrap.com/, alternative themes at https://www.bootstrapcdn.com/bootswatch/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="../static/styles.css" rel="stylesheet"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../static/scripts.js"></script>
+        <title>DND Character Generator</title>
+
+    </head>
+        <h1 class="center header">DND 3.5 Character Generator</h1>
+    
+        <div class="center step" id="race">
+            <h3>Choose a Race</h3>
+            <div class="buttons">
+                <button id="human" class="btn btn-default">Human</button>
+                <button id="elf" class="btn btn-default">Elf</button>
+                <button id="half-elf" class="btn btn-default">Half-Elf</button>
+                <button id="half-orc" class="btn btn-default">Half-Orc</button>
+                <button id="dwarf" class="btn btn-default">Dwarf</button>
+                <button id="halfling" class="btn btn-default">Halfling</button>
+                <button id="gnome" class="btn btn-default">Gnome</button>
+            </div>
+        </div>       
+        
+        <div class="center step" id="class">
+            <h3>Choose a Class</h3>
+            <div class="buttons">
+                <button id="fighter" class="btn btn-default">Fighter</button>
+                <button id="bard" class="btn btn-default">Bard</button>
+                <button id="barbarian" class="btn btn-default">Barbarian</button>
+                <button id="ranger" class="btn btn-default">Ranger</button>
+                <button id="wizard" class="btn btn-default">Wizard</button>
+                <button id="rogue" class="btn btn-default">Rogue</button>
+                <button id="paladin" class="btn btn-default">Paladin</button>
+                <button id="sorceror" class="btn btn-default">Sorceror</button>
+                <button id="druid" class="btn btn-default">Druid</button>
+                <button id="cleric" class="btn btn-default">Cleric</button>
+                <button id="monk" class="btn btn-default">Monk</button>
+            </div>
+        </div>
+
+        <div class="center step" id="class">
+            <h3>Stats</h3>
+            <button id="roll-all">Roll All Stats</button>
+              <!-- <p>Roll individually or all at once</p> -->
+            <p>Strength (STR): <span class="stat-roll">0</span></p>
+            <p>Dexterity (DEX): <span class="stat-roll">0</span></p>
+            <p>Constitution (CON): <span class="stat-roll">0</span></p>
+            <p>Intelligence (INT): <span class="stat-roll">0</span></p>
+            <p>Wisdom (WIS): <span class="stat-roll">0</span></p>
+            <p>Charisma (CHA): <span class="stat-roll">0</span></p>
+        </div>
+        
+        <div class="center step" id="class">
+            <h3>Skills</h3>
+            <table>
+                <tr>
+                    <th>Skill Name</th>
+                    <th>Key Ability</th>
+                    <th>Skill Modifier</th>
+                    <th>Ability Modifier</th>
+                    <th>Ranks</th>
+                    <th>Misc. Modifier</th>
+                </tr>
+                <!-- use bootstrap for table -->
+            </table>
+
+        </div>
+        
+    </body>
+
+</html>
