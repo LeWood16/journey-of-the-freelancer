@@ -21,67 +21,86 @@
         <title>DND Character Generator</title>
 
     </head>
-        <h1 class="center header">DND 3.5 Character Generator</h1>
-        <a href="side.html">Over to Side Page</a>
+    <body>
 
-    
-        <div class="center step" id="race">
-            <h3>Choose a Race</h3>
-            <div class="buttons">
-                <button id="human" class="btn btn-default">Human</button>
-                <button id="elf" class="btn btn-default">Elf</button>
-                <button id="half-elf" class="btn btn-default">Half-Elf</button>
-                <button id="half-orc" class="btn btn-default">Half-Orc</button>
-                <button id="dwarf" class="btn btn-default">Dwarf</button>
-                <button id="halfling" class="btn btn-default">Halfling</button>
-                <button id="gnome" class="btn btn-default">Gnome</button>
-            </div>
-        </div>       
-        
-        <div class="center step" id="class">
-            <h3>Choose a Class</h3>
-            <div class="buttons">
-                <button id="fighter" class="btn btn-default">Fighter</button>
-                <button id="bard" class="btn btn-default">Bard</button>
-                <button id="barbarian" class="btn btn-default">Barbarian</button>
-                <button id="ranger" class="btn btn-default">Ranger</button>
-                <button id="wizard" class="btn btn-default">Wizard</button>
-                <button id="rogue" class="btn btn-default">Rogue</button>
-                <button id="paladin" class="btn btn-default">Paladin</button>
-                <button id="sorceror" class="btn btn-default">Sorceror</button>
-                <button id="druid" class="btn btn-default">Druid</button>
-                <button id="cleric" class="btn btn-default">Cleric</button>
-                <button id="monk" class="btn btn-default">Monk</button>
-            </div>
-        </div>
+<div class="column three-fourths" id="blog">
+  <div class="blog-post" >
+    <h1>Testing Like the TSA</h1>
+    <div class="date">06 March 2017</div>
+    <article>
+      <p>I was very glad to read in DHH’s <a href="https://signalvnoise.com/posts/3159-testing-like-the-tsa">recent post</a> that he is actually still using TDD***.  I’m glad he has realized that TDD is not, in fact, <a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">dead</a>.</p>
 
-        <div class="center step" id="class">
-            <h3>Stats</h3>
-            <button id="roll-all">Roll All Stats</button>
-              <!-- <p>Roll individually or all at once</p> -->
-            <p>Strength (STR): <span class="stat-roll">0</span></p>
-            <p>Dexterity (DEX): <span class="stat-roll">0</span></p>
-            <p>Constitution (CON): <span class="stat-roll">0</span></p>
-            <p>Intelligence (INT): <span class="stat-roll">0</span></p>
-            <p>Wisdom (WIS): <span class="stat-roll">0</span></p>
-            <p>Charisma (CHA): <span class="stat-roll">0</span></p>
-        </div>
-        
-        <div class="center step" id="class">
-            <h3>Skills</h3>
-            <table>
-                <tr>
-                    <th>Skill Name</th>
-                    <th>Key Ability</th>
-                    <th>Skill Modifier</th>
-                    <th>Ability Modifier</th>
-                    <th>Ranks</th>
-                    <th>Misc. Modifier</th>
-                </tr>
-                <!-- use bootstrap for table -->
-            </table>
+<p>This blog is a simple response; just to state a couple of disagreements.  But I have to say, I agree more than I disagree.</p>
 
-        </div>
+<p>DHH presented seven points.  I have reproduced them below, along with my comments.  And since DHH did not justify his opinions, I’ll not justify mine.</p>
+
+<ul>
+  <li>(1. Don’t aim for 100% coverage.</li>
+</ul>
+
+<blockquote>
+  <p><em>Disagree.  Aim as high as you can.  Treat 100% as an asymptotic goal.  No other number makes a reasonable goal.  There is never a reason to stop driving your coverage number higher.</em></p>
+</blockquote>
+
+<ul>
+  <li>(2. Code-to-test ratios above 1:2 is a smell, above 1:3 is a stink.</li>
+</ul>
+
+<blockquote>
+  <p><em>Disagree.  1:1 LOC is about right.  If you have 20K lines of code, you probably ought to have about 20K lines of tests.  (BTW, I can’t make any sense of DHH’s ratios there.  I think he meant the first one the other way around (2:1) and I think he meant the second one to be (1.5:1).  Or maybe I’m just dense.</em></p>
+</blockquote>
+
+<ul>
+  <li>(3. You’re probably doing it wrong if testing is taking more than 1/3 of your time. You’re definitely doing it wrong if it’s taking up more than half.</li>
+</ul>
+
+<blockquote>
+  <p><em>Agree.  Testing should take none of your time.  Writing tests, with TDD, requires negative time (i.e. it saves you a boatload)  Every worthwhile test you don’t write costs you time.</em></p>
+</blockquote>
+
+<ul>
+  <li>(4. Don’t test standard Active Record associations, validations, or scopes.</li>
+</ul>
+
+<blockquote>
+  <p><em>Agree.  There’s generally no reason to test your framework; so long as you trust it.  If you don’t trust it (and there are many frameworks out there that are not trustworthy) then writing some tests against the framework might be worthwhile.  Consider it equivalent to “Incomming Inspection”.</em></p>
+</blockquote>
+
+<ul>
+  <li>(5. Reserve integration testing for issues arising from the integration of separate elements (aka don’t integration test things that can be unit tested instead).</li>
+</ul>
+
+<blockquote>
+  <p><em>Agree.  Keep your tests focused.  Don’t test through UIs.  Don’t test through web servers.  Test as close to the code as you can.</em></p>
+</blockquote>
+
+<ul>
+  <li>(6. Don’t use Cucumber unless you live in the magic kingdom of non-programmers-writing-tests (and send me a bottle of fairy dust if you’re there!)</li>
+</ul>
+
+<blockquote>
+  <p><em>Agree and Disagree.  Cucumber (Gherkin) is worth it only if you have business people and/or QA who are willing to read your tests.  If they will also write your acceptance tests then: ABSOLUTELY send that fairy dust far and wide; because it’s worth its weight in diamonds.</em></p>
+</blockquote>
+
+<ul>
+  <li>(7. Don’t force yourself to test-first every controller, model, and view (my ratio is typically 20% test-first, 80% test-after).</li>
+</ul>
+
+<blockquote>
+  <p><em>Agree…  Sort of.  Some controllers, models, and views are too stupid to bother to test.  If they are obviously correct, because they are one line of code, then testing them might be superfluous.  But be careful.  Sometimes one line of code has 20 lines of semantics.</em></p>
+</blockquote>
+
+<hr />
+<p>*** It has been pointed out to me that the “TSA” post actually predates the “TDD is Dead” post by several years.  Somehow or another I got the two backwards.  (sigh).</p>
+
+
+
+
+    </article>
+  </div>
+</div>
+
+</div>
         
     </body>
 
