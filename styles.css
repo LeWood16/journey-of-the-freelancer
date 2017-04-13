@@ -6,70 +6,32 @@
     text-align: center;
 }
 
+.blog-banner{
+    font-family: sans-serif;
+    color: #F00;
+    font-size: 1.5em;
+    font-weight: 900;
 
-
-main .form-control
-{
-    /* center form controls */
-    display: inline-block;
-
-    /* override Bootstrap's 100% width for form controls */
-    width: auto;
 }
 
-main img
-{
-    /* constrain images on small screens */
-    max-width: 100%;
+.blog-post{
+    font-family: Times;
+    font-size: 1.2em;
 }
 
-main td
-{
-    /* left-align tables' cells */
-    text-align: left;
-}
-
-
-.bold {
+.blog-title{
+    font-family: sans-serif;
+    font-size: 2em;
     font-weight: 900;
 }
 
-.electric {
-    background: #3CC47C;
+p {
+    font-size: 1.3em;
 }
 
-.forest {
-    background: #1E392A;
-}
-
-.light {
-    background: #E9C893;
-}
-
-.w {
-    color: white;
-}
-
-.step{
-    width: 80%;
-    margin: 0 auto;
-    background: #E9C893;
-}
-
-.header{
-    font-weight: 900;
-}
-
-.stat-roll{
-    color: #000;
-    background: #FFF;
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.buttons > button{
-    width: 100px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    border-radius: 10px;
+ul li {
+    margin: 10px;
+    padding: 10px;
+    background: #ff9;
+    font-style: italic;
 }
