@@ -29,9 +29,64 @@ p {
     font-size: 1.3em;
 }
 
-ul li {
+.blog-post ul li {
     margin: 10px;
     padding: 10px;
     background: #ff9;
     font-style: italic;
+}
+
+.past-posts{
+    padding-left: 20px;
+    background: #ccc;
+    border-radius: 30px;
+}
+
+#journey{
+    position: absolute;
+    font-size: 30px;
+    top: -30px;
+    left: 25px;
+    font-family: 'UnifrakturCook', cursive;
+
+}
+
+#freelancer{
+    position: absolute;
+    font-size: 30px;
+    top: 30px;
+    left: 15px;
+    font-family: 'UnifrakturCook', cursive;
+
+    
+}
+
+.ph-symbol{
+    
+    width: 140px;
+    height: 140px;
+    background: #f00;
+    color: #fff;
+    line-height: 140px;
+    font-size: 0.7em;
+    border-radius: 90px;
+    margin: 5px;
+    margin-left: 3px;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+#stylish-linking-div{
+    position: absolute;
+    background: #ccc;
+}
+
+.tiny-date{
+    font-size: 0.8em;
+    color: #999;
+}
+
+.past-posts ul li{
+    color: #f00;
+    font-size: 1.3em;
+    margin-bottom: 15px;
 }
