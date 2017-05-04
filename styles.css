@@ -29,7 +29,7 @@ p {
     font-size: 1.3em;
 }
 
-.blog-post ul li {
+.blog-post ul li, .blog-post ol li {
     margin: 10px;
     padding: 10px;
     background: #ff9;
